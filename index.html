@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Kreon:300,400' rel='stylesheet' type='text/css'>
+  <script src="js/libs/modernizr-2.7.1.min.js"></script>
+  <script  type="text/javascript" src="js/libs/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/arbor.js"></script>
+  <script type="text/javascript" src="js/arbor-tween.js"></script>
+  <script type="text/javascript" src="js/graphics.js"></script>
+  <script type="text/javascript" src="js/renderer.js"></script>
+  <script type="text/javascript" src="js/node-diagram.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+  <a href="#" class="arrow-up scroll-button"></a>
+  <div class= "concept-header">
+    <div class="header-share">
+      <a href="http://www.facebook.com/" target="_blank" class="icon-facebook rollin-transition"></a>
+      <a href="https://twitter.com/" target="_blank" class="icon-twitter rollin-transition"></a>
+      <a href="https://plus.google.com/" target="_blank" class="icon-google rollin-transition"></a>
+    </div>
+    <div class="header-info rollin-transition-out">
+    </div>
+    <div class="concept-header-pattern">
+    </div>
+    <div class="concept-header-background">
+    </div>
+    <div class="header-wrap">
+      <a class="header-logo" href="#home" ></a>
+    </div>
+    <div class="concept-header-controls" >
+      <a href="#" class="arrow-down scroll-button"></a>
+    </div>
+  </div>     
+  <div class="container-wrapper">
+    <div class="container">
+      <div class="row fact">
+        <div class="col-lg-4">
+          <div class = "history-icon"></div>
+          <div class ="fact-text">
+            <h1>Usenet</h1>
+            <p><em>
+              "Usenet is a worldwide distributed Internet discussion system. It was developed from the general purpose UUCP dial-up network architecture, but subsequently switched to NNTP as usenet grew large.
+            </em></p>
+            <p><em>
+              Usenet was originally created to distribute text content encoded in the 7-bit ASCII character set. With the help of programs that encode 8-bit values into ASCII, it became practical to distribute binary files as content."
+            </em></p>
+            <small>
+              <em><a href="http://en.wikipedia.org/wiki/Usenet">-Wikipedia</a></em>
+            </small>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class = "provider-icon">
+          </div>
+          <div class ="fact-text">
+            <h1>Providers</h1>
+            <p>
+              Usenet Providers are divided into two sub categories, resellers and Tier-one backend providers. The backend providers own servers connected to Usenet while resellers lease or buy bulk usage from the backend providers. 
+            </p>
+            <p>
+              While resellers can differ in price, location and retention they share the content of their backend provider, something worth taking into consideration.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class = "retention-icon">
+          </div>
+          <div class ="fact-text">
+            <h1>Retention</h1>
+            <p><em>
+              "Each newsgroup is generally allocated a certain amount of storage space for post content. When this storage has been filled, each time a new post arrives, old posts are deleted to make room for the new content.
+            </em></p>
+            <p><em>
+             If the network bandwidth available to a server is high but the storage allocation is small, it is possible for a huge flood of incoming content to overflow the allocation and push out everything that was in the group before it."
+           </em></p>
+           <small>
+            <em><a href="http://en.wikipedia.org/wiki/Usenet">-Wikipedia</a></em>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="row shadow-divider"> </div>
+    <div class="page-header">
+      <h1>Node diagram</h1>
+    </div>
+    <div class= "node">
+      <canvas id="viewport" width="1117" height="428"></canvas>
+      <script language="javascript" type="text/javascript" src="js/node-graph.js"></script>
+    </div>
+    <div class="row shadow-divider">
+    </div>
+    <div class="row table-data">
+      <div class="page-header">
+        <h1>Providers</h1>
+      </div>
+      <div id="providerTable_wrapper" class="dataTables_wrapper" role="grid"><table id="providerTable" class="table table-striped table-bordered table-hover dataTable">
+        <thead>
+          <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 327px;">Name</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-label="Origin: activate to sort column ascending" style="width: 72px;">Origin</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-label="Servers: activate to sort column ascending" style="width: 86px;">Servers</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-label="Retention: activate to sort column ascending" style="width: 108px;">Retention</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-label="Unlimited Account($): activate to sort column ascending" style="width: 238px;">Unlimited Account($)</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="providerTable" rowspan="1" colspan="1" aria-label="Backbone provider: activate to sort column ascending" style="width: 230px;">Backbone provider</th></tr> 
+        </thead>
+        <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd">
+          <td class=" sorting_1"><a class="corrected-link-color" href="http://www.forteinc.com/">Agent Usenet Service</a></td>
+          <td class=" "><img src="img/flags/US.PNG"></td>
+          <td class=" ">
+            <img src= "img/flags/EU.PNG">
+            <img src="img/flags/US.PNG">
+          </td>
+          <td class=" ">1500</td>
+          <td class=" ">14.75</td>
+          <td class=" ">Highwinds media group</td>
+        </tr><tr class="even">
+        <td class=" sorting_1"><a class="corrected-link-color" href="http://www.altbinaries.com/">Altbinaries.com</a></td>
+        <td class=" "><img src="img/flags/US.PNG"></td>
+        <td class=" ">
+        </td>
+        <td class=" ">330</td>
+        <td class=" ">12.95</td>
+        <td class=" ">Highwinds media group</td>
+      </tr><tr class="odd">
+      <td class=" sorting_1"><a class="corrected-link-color" href="https://anonynews.com/">AnonyNews</a></td>
+      <td class=" "><img src="img/flags/US.PNG"></td>
+      <td class=" ">
+        <img src="img/flags/EU.PNG">
+        <img src="img/flags/US.PNG">
+      </td>
+      <td class=" ">1200</td>
+      <td class=" ">19.99</td>
+      <td class=" ">READNEWS</td>
+    </tr><tr class=" even">
+    <td class=" sorting_1"><a class="corrected-link-color" href="http://www.astraweb.com/">ASTRAWEB</a></td>
+    <td class=" "><img src="img/flags/SG.PNG"></td>
+    <td class=" ">
+      <img src="img/flags/EU.PNG">
+      <img src="img/flags/US.PNG">
+    </td>
+    <td class=" ">1892</td>
+    <td class=" ">15</td>
+    <td class=" ">-</td>
+  </tr><tr class="odd">
+  <td class=" sorting_1"><a class="corrected-link-color" href="http://www.bintube.com">bintube</a></td>
+  <td class=" "><img src="img/flags/US.PNG"></td>
+  <td class=" ">
+  </td>
+  <td class=" ">1860</td>
+  <td class=" ">9.16</td>
+  <td class=" ">Highwinds media group</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.blocknews.net/">Blocknews</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1665</td>
+<td class=" ">-</td>
+<td class=" ">READNEWS</td>
+</tr><tr class=" odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.cambrium-usenet-services.nl/">CAMBRIUM USENET SERVICES</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr><tr class=" even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.cheapnews.eu/">CHEAPNEWS</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+</td>
+<td class=" ">1000</td>
+<td class=" ">11.28</td>
+<td class=" ">-</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.easynews.com">Easynews</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1800</td>
+<td class=" ">-</td>
+<td class=" ">Highwinds media group</td>
+</tr><tr class=" even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.euroaccess.nl/">EUROACCESS</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.eweka.nl/">Eweka</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+</td>
+<td class=" ">1892</td>
+<td class=" ">13.26</td>
+<td class=" ">Highwinds media group</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.fastusenet.org/">FastUsenet</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1880</td>
+<td class=" ">9.95</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://frugalusenet.com/">FrugalUsenet</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">300</td>
+<td class=" ">4.99</td>
+<td class=" ">READNEWS</td>
+</tr><tr class=" even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.giganews.com/">Giganews</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/ASIA.PNG">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1903</td>
+<td class=" ">34.99</td>
+<td class=" ">-</td>
+</tr><tr class=" odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="www.highwinds.com/">Highwinds media group</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.newshosting.com">Newshosting</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1896</td>
+<td class=" ">19.95</td>
+<td class=" ">Highwinds media group</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="https://newsoo.fr/">Newsoo</a></td>
+<td class=" "><img src="img/flags/FR.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+</td>
+<td class=" ">1000</td>
+<td class=" ">10.94</td>
+<td class=" ">CHEAPNEWS</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://ngroups.net">Ngroups.net</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1500</td>
+<td class=" ">19.99</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.powerusenet.com/">Powerusenet</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1896</td>
+<td class=" ">19.99</td>
+<td class=" ">Giganews</td>
+</tr><tr class=" even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.readnews.com/">READNEWS</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">1050</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.rhinonewsgroups.com/">Rhinonewsgroups</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1000</td>
+<td class=" ">18.99</td>
+<td class=" ">Giganews</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="https://secretusenet.com/">Secretusenet</a></td>
+<td class=" "><img src="img/flags/MH.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">880</td>
+<td class=" ">16.56</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.supernews.com/">Supernews</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1896</td>
+<td class=" ">11.99</td>
+<td class=" ">Giganews</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://usenet-news.net/">Usenet-News</a></td>
+<td class=" "><img src="img/flags/BZ.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">1500</td>
+<td class=" ">19</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.usenet.net/">Usenet.NET</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1896</td>
+<td class=" ">19.99</td>
+<td class=" ">Giganews</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://usenet.se/">Usenet.SE</a></td>
+<td class=" "><img src="img/flags/SE.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+</td>
+<td class=" ">800</td>
+<td class=" ">23.13</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.usenetnow.net/">Usenetnow</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">1665</td>
+<td class=" ">12</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://usenetserver.com">UsenetServer</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1896</td>
+<td class=" ">10</td>
+<td class=" ">Highwinds media group</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.usenetworld.net/">Usenetworld</a></td>
+<td class=" "><img src="img/flags/US.PNG"></td>
+<td class=" ">
+  <img src="img/flags/EU.PNG">
+  <img src="img/flags/US.PNG">
+</td>
+<td class=" ">1617</td>
+<td class=" ">9.95</td>
+<td class=" ">READNEWS</td>
+</tr><tr class="even">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.xentech.net/">XENTECH</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr><tr class="odd">
+<td class=" sorting_1"><a class="corrected-link-color" href="http://www.xsnews.com/">XSNEWS</a></td>
+<td class=" "><img src="img/flags/NL.PNG"></td>
+<td class=" ">
+</td>
+<td class=" ">876</td>
+<td class=" ">-</td>
+<td class=" ">-</td>
+</tr></tbody></table></div>
+</div>
+</div>
+</div>   
+<section class="footer-wrapper">
+  <div class="footer">
+     <div class="col-lg-4">
+      <h1>Resources</h1>
+      <ul>
+        <li>Bootstrap</li>
+        <li>Jekyll</li>
+        <li>Arbor.js</li>
+         <li>Sass</li>
+        <li>icomoon.io</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <h1>Contact</h1>
+        <p>info *at* usenetmap.com</p>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
