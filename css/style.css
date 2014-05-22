@@ -7415,14 +7415,14 @@ button.close {
 
 @font-face {
   font-family: 'Track';
-  src: url("fonts/Track.ttf");
+  src: url("font/Track.ttf");
 }
 
 @font-face {
   font-family: 'Track';
   src: url("Track.ttf");
   font-weight: italic;
-  src: url("fonts/Track_Italic.ttf");
+  src: url("font/Track_Italic.ttf");
 }
 
 body {
