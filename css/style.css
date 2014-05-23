@@ -7676,7 +7676,7 @@ a:visited {
 .footer {
   left: 0;
   bottom: 0;
-  height: 200px;
+  min-height: 200px;
   width: 100%;
   height: 100%;
   padding: 1% 20%;
