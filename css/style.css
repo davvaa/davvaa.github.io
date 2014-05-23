@@ -7565,7 +7565,6 @@ a:visited {
   display: block;
   content: '';
   z-index: 1000;
-  position: absolute;
   background-image: url('../img/shadow.png?1400744969');
   background-repeat: no-repeat;
   margin-left: 5em;
