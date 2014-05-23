@@ -7572,7 +7572,7 @@ a:visited {
   z-index: 1000;
   background-image: url('../img/shadow.png?1400744969');
   background-repeat: no-repeat;
-  margin-left: 5em;
+  background-size: 100% auto;
 }
 
 .concept-header-background {
