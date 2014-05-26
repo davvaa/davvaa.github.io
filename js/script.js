@@ -1,14 +1,18 @@
 $(function () {
     $(window).load(function () {
-    	$(".header-wrap").removeClass("dont-display");
-    	$(".header-wrap").addClass("header-wrap-animate"); 
+    
         setTimeout(function () {
+        		$(".header-wrap").removeClass("dont-display");
+    	$(".header-wrap").addClass("header-wrap-animate"); 
             $(".header-share a").removeClass("rollin-transition");
             $(".header-info").removeClass("rollin-transition-out");
 
         }, 2E3);
     });
     $(document).ready(function () {
+
+
+
         $("#providerTable").dataTable({
             "bPaginate": false,
             "bFilter": false,
