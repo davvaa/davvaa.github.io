@@ -6880,7 +6880,7 @@ button.close {
     display: none !important;
   }
 }
-.arrow-down, .header-wrap, .concept-header-controls, .rollin-transition, .rollin-transition-out, .header-icon-pulse, .header-info:hover, .header-share a:hover {
+.arrow-down, .header-wrap-animate, .concept-header-controls, .rollin-transition, .rollin-transition-out, .header-icon-pulse, .header-info:hover, .header-share a:hover {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   -o-animation-duration: 1s;
@@ -6958,7 +6958,7 @@ button.close {
   }
 }
 
-.header-wrap {
+.header-wrap-animate {
   -webkit-animation-name: bounceInDown;
   -moz-animation-name: bounceInDown;
   -o-animation-name: bounceInDown;
@@ -7459,13 +7459,6 @@ a:visited {
   color: #FF4E50;
 }
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
 .container-wrapper {
   position: relative;
   margin-top: 3em;
@@ -7612,6 +7605,10 @@ a:visited {
   margin: 0;
   position: relative;
   top: 130px;
+}
+
+.dont-display {
+  display: none;
 }
 
 .concept-header-controls {

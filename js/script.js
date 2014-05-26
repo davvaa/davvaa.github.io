@@ -1,10 +1,12 @@
 $(function () {
     $(window).load(function () {
-    	$("body").removeClass("preload");
+    	$(".header-wrap").removeClass("dont-display");
+    	$(".header-wrap").addClass("header-wrap-animate"); 
         setTimeout(function () {
             $(".header-share a").removeClass("rollin-transition");
-            $(".header-info").removeClass("rollin-transition-out")
-        }, 2E3)
+            $(".header-info").removeClass("rollin-transition-out");
+
+        }, 2E3);
     });
     $(document).ready(function () {
         $("#providerTable").dataTable({
