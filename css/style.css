@@ -336,11 +336,6 @@ video {
   vertical-align: baseline;
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
-}
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -7451,12 +7446,24 @@ ul {
   color: #666464;
 }
 
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
 a:link {
   color: #FF4E50;
 }
 
 a:visited {
   color: #FF4E50;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
 .container-wrapper {
